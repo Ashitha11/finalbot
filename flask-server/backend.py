@@ -15,7 +15,6 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-app.secret_key = "your-secret-key"
 CORS(app, supports_credentials=True, origins=["http://localhost:3000"])
 
 openai.api_key = os.getenv("OPENAI_API_KEY") or "your-openai-api-key-here"
